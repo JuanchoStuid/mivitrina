@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,4 +24,8 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/hola', function(){
   return view('hola');
+});
+
+Route::get('prueba', function(){
+  return view('prueba');
 });
