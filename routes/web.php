@@ -29,3 +29,7 @@ Route::get('/hola', function(){
 Route::get('prueba', function(){
   return view('prueba');
 });
+
+Route::get('master', function(){
+  return view('layouts.master-primario');
+});
