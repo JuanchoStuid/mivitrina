@@ -5,7 +5,15 @@
       <span>
         <i class="fa fa-map-marker">
         </i>
-        New South Wales, Sydney
+        New South Wales, 
+        @inject('Var', 'App\User')
+          
+        @php
+          $versiones = $Var::select('id', 'name')->orderBy('id', 'DESC')->first();
+        @endphp
+        {{ $versiones->name }}
+        {{-- <div class="t-changelog">{{$versiones->ver_numero ?? ''}} {{$versiones->ver_titulo ?? ''}}</div> --}}
+
       </span>
       <span>
         <i class="fa fa-mobile-phone">
