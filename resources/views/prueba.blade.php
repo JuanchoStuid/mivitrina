@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      PLAIN - Multi-Purose Bootstrap HTML5 Template
+      Mi Vitrina
     </title>
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
@@ -58,7 +58,14 @@
               <span>
                 <i class="fa fa-map-marker">
                 </i>
-                New South Wales, Sydney
+                New South Wales, 
+                @inject('Var', 'App\User')
+          
+                @php
+                  $versiones = $Var::select('id', 'name')->orderBy('id', 'DESC')->first();
+                @endphp
+                {{ $versiones->name }}
+                {{-- <div class="t-changelog">{{$versiones->ver_numero ?? ''}} {{$versiones->ver_titulo ?? ''}}</div> --}}
               </span>
               <span>
                 <i class="fa fa-mobile-phone">
