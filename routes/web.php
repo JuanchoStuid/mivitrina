@@ -33,3 +33,7 @@ Route::get('prueba', function(){
 Route::get('master', function(){
   return view('layouts.master-primario');
 });
+
+Route::get('about', function(){
+  return view('layouts.master-about');
+});
