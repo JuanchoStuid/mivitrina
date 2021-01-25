@@ -31,93 +31,21 @@
       <div id="portfolio-items" class="portfolio-items text-center">
 
         <!-- Portfolio Item Starts -->
-        <div class="mix marketing planning">
-          <figure class="effect-layla">
-            <img src="assets/img/portfolio/img1.jpg">
-            <figcaption>
-              <h3>
-                Ornaments with love
-              </h3>
-              <div class="portfolio-category">
-                <span>Marketing</span>, <span>Planning</span>
-              </div>
-            </figcaption>
-          </figure>
-        </div><!-- Portfolio Item Ends -->
-      
-        <!-- Portfolio Item Starts -->
-        <div class="mix branding planning">
-          <figure class="effect-layla">
-            <img src="assets/img/portfolio/img2.jpg">
-            <figcaption>
-              <h3>
-                Yes i love technolog
-              </h3>
-              <div class="portfolio-category">
-                <span>Branding</span>, <span>Planning</span>   
-              </div>
-            </figcaption>
-          </figure>
-        </div><!-- Portfolio Item Ends -->
-
-        <!-- Portfolio Item Starts -->
-        <div class="mix branding research">
-          <figure class="effect-layla">
-            <img src="assets/img/portfolio/img3.jpg">
-            <figcaption>
-              <h3>
-                Love to take differe
-              </h3>
-              <div class="portfolio-category">
-                <span>Branding</span>, <span>Research</span>   
-              </div>
-            </figcaption>
-          </figure>
-        </div><!-- Portfolio Item Ends -->
-
-        <!-- Portfolio Item Starts -->
-        <div class="mix marketing research">
-          <figure class="effect-layla">
-            <img src="assets/img/portfolio/img4.jpg">
-            <figcaption>
-              <h3>
-                Working With Differe
-              </h3>
-              <div class="portfolio-category">
-                <span>Branding</span>, <span>Research</span>   
-              </div>
-            </figcaption>
-          </figure>
-        </div><!-- Portfolio Item Ends -->
-
-        <!-- Portfolio Item Starts -->
-        <div class="mix marketing planning">
-          <figure class="effect-layla">
-            <img src="assets/img/portfolio/img5.jpg">
-            <figcaption>
-              <h3>
-                Love to take differe
-              </h3>
-              <div class="portfolio-category">
-                <span>Branding</span>, <span>Research</span>   
-              </div>
-            </figcaption>
-          </figure>
-        </div><!-- Portfolio Item Ends -->
-
-        <!-- Portfolio Item Starts -->
-        <div class="mix planning research">
-          <figure class="effect-layla">
-            <img src="assets/img/portfolio/img6.jpg">
-            <figcaption>
-              <h3>
-                Working With Differe
-              </h3>
-              <div class="portfolio-category">
-                <span>Branding</span>, <span>Research</span>   
-              </div>
-            </figcaption>
-          </figure>
-        </div><!-- Portfolio Item Ends -->
+        @foreach ($portfolios as $por)
+          <div class="mix {{ $por->por_div_class_mix }}">
+            <figure class="effect-layla">
+              <img src="{{ $por->por_img_src }}">
+              <figcaption>
+                <h3>
+                  {{ $por->por_h3 }}
+                </h3>
+                <div class="portfolio-category">
+                  <span>{{ $por->por_div_span }}</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        @endforeach
+        <!-- Portfolio Item Ends -->
         
       </div><!-- Portfolio Items Wrapper Ends-->
