@@ -37,3 +37,5 @@ Route::get('master', function(){
 Route::get('about', function(){
   return view('layouts.master-about');
 });
+
+Route::get('welcome', 'HomeController@index')->name('home.index');
