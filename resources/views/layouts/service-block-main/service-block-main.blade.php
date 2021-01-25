@@ -2,83 +2,29 @@
 <div class="container">
 
     <h1 class="section-title wow fadeIn animated" data-wow-delay=".2s">
-      What We Do
+      Que hacemos, hola jejeje
     </h1>
     <div class="row">
-      <div class="col-sm-6 col-md-3 text-center">
       <!-- Service-Block-1 Item Starts -->
-        <div class="service-item wow fadeInUpQuick animated" data-wow-delay=".5s">
-          <div class="icon-wrapper">
-            <i class="icon-Rotate fa-4x">
-            </i>
+      @foreach ($services as $ser)
+        <div class="col-sm-6 col-md-3 text-center">
+          <div class="service-item wow fadeInUpQuick animated" data-wow-delay="{{ $ser->ser_data_wow_delay }}">
+            <div class="icon-wrapper">
+              <i class="{{ $ser->ser_div_div_i_class }}">
+              </i>
+            </div>
+            <h2>
+              {{ $ser->ser_h2 }}
+            </h2>
+            <p>
+              {{ $ser->ser_p }}
+            </p>
+            <a href="{{ $ser->ser_a_href_btn }}" class="btn btn-common">
+              {{ $ser->ser_a_text_btn }}
+            </a>
           </div>
-          <h2>
-            Responsive Design
-          </h2>
-          <p>
-            I should be incapable of drawing a single stroke at the present moment.
-          </p>
-          <a href="#" class="btn btn-common">
-            Learn More
-          </a>
-        </div><!-- Service-Block-1 Item Ends -->
-      </div>
-
-      <div class="col-sm-6 col-md-3 text-center">
-        <!-- Service-Block-1 Item Starts -->
-        <div class="service-item wow fadeInUpQuick animated" data-wow-delay=".8s">
-          <div class="icon-wrapper">
-            <i class="icon-Backward fa-4x">
-            </i>
-          </div>
-          <h2>
-            Cloud Hosting
-          </h2>
-          <p>
-            I should be incapable of drawing a single stroke at the present moment.
-          </p>
-          <a href="#" class="btn btn-common">
-            Learn More
-          </a>
-        </div><!-- Service-Block-1 Item Ends -->
-      </div>
-
-      <div class="col-sm-6 col-md-3 text-center">
-        <!-- Service-Block-1 Item Starts -->
-        <div class="service-item wow fadeInUpQuick animated" data-wow-delay="1.1s">
-          <div class="icon-wrapper">
-            <i class="icon-Bigger fa-4x">
-            </i>
-          </div>
-          <h2>
-            Digital Marketing
-          </h2>
-          <p>
-            I should be incapable of drawing a single stroke at the present moment.
-          </p>
-          <a href="#" class="btn btn-common">
-            Learn More
-          </a>
-        </div><!-- Service-Block-1 Item Ends -->
-      </div>
-
-      <div class="col-sm-6 col-md-3 text-center">
-        <!-- Service-Block-1 Item Starts -->
-        <div class="service-item  wow fadeInUpQuick animated" data-wow-delay="1.4s">
-          <div class="icon-wrapper">
-            <i class="icon-MagicWand fa-4x">
-            </i>
-          </div>
-          <h2>
-            UX Development
-          </h2>
-          <p>
-            I should be incapable of drawing a single stroke at the present moment.
-          </p>
-          <a href="#" class="btn btn-common">
-            Learn More
-          </a>
         </div>
-      </div><!-- Service-Block-1 Item Ends -->
+      @endforeach
+      <!-- Service-Block-1 Item Ends -->
     </div>
   </div><!-- Container Ends -->
