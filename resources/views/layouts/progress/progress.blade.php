@@ -9,54 +9,20 @@
       <div class="row">
         <!-- Progress Items Starts -->
         <div class="our-progress text-center">
-          <div class="col-md-3 progress-item wow bounceIn" data-wow-delay=".2s">
-            <div class="icon-effect">
-              <i class="icon-Zoom">
-              </i>
+          @foreach ($progress as $prs)
+            <div class="col-md-3 progress-item {{ $prs->prs_div_class }}" data-wow-delay="{{ $prs->prs_data_wow_delay }}">
+              <div class="icon-effect">
+                <i class="{{ $prs->prs_i_class }}">
+                </i>
+              </div>
+              <h3>
+                {{ $prs->prs_div_h3 }}
+              </h3>
+              <p>
+                {{ $prs->prs_div_p }}
+              </p>
             </div>
-            <h3>
-              Research
-            </h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-            </p>
-          </div>
-          <div class="col-md-3 progress-item progress-bottom wow bounceIn" data-wow-delay=".5s">
-            <div class="icon-effect">
-              <i class="icon-Brush">
-              </i>
-            </div>
-            <h3>
-              Design
-            </h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-            </p>
-          </div>
-          <div class="col-md-3 progress-item wow bounceIn" data-wow-delay=".8s">
-            <div class="icon-effect">
-              <i class="icon-CodeSnippet">
-              </i>
-            </div>
-            <h3>
-              Code
-            </h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-            </p>
-          </div>
-          <div class="col-md-3 progress-item progress-bottom wow bounceIn" data-wow-delay="1.3s">
-            <div class="icon-effect">
-              <i class="icon-Backward">
-              </i>
-            </div>
-            <h3>
-              Launch
-            </h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-            </p>
-          </div>
+          @endforeach
         </div><!-- Progress Items Ends -->
       </div><!-- Row Ends -->
     </div><!-- Container Ends -->
