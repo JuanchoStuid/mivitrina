@@ -7,86 +7,34 @@
         <div class="carousel slide" data-ride="carousel" id="testimonial-carousel">
           <!-- Carousel Items / Quotes -->
           <div class="carousel-inner">
-            <div class="item active">
-              <blockquote>
-                <div class="col-sm-3 text-center animated zoomIn">
-                  <img class="img-circle" src="assets/img/testimonial/img1.jpg" alt="">
-                </div>
-                <div class="col-sm-9 animated delay-0-5 fadeInUp">
-                  <p>
-                    <i class="fa fa-quote-left fa-2x">
-                    </i>
-                    I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. 
-                  </p>
-                  <small>
-                    <span class="name">
-                      <i class="fa fa-user">
+            @foreach ($testimonials as $tes)
+              <div class="item {{ $tes->tes_div_class_active }}">
+                <blockquote>
+                  <div class="col-sm-3 text-center animated zoomIn">
+                    <img class="img-circle" src="{{ $tes->tes_img_src }}" alt="">
+                  </div>
+                  <div class="col-sm-9 animated delay-0-5 fadeInUp">
+                    <p>
+                      <i class="fa fa-quote-left fa-2x">
                       </i>
-                      Robert L. Cathcart 
-                    </span>
-                    <span class="company">
-                      <i class="fa fa-building">
-                      </i>
-                      GrayGrids
-                    </span>
-                  </small>
-                </div>
-              </blockquote>
-            </div>
-            
-            <div class="item">
-              <blockquote>
-                <div class="col-sm-3 text-center animated zoomIn">
-                  <img class="img-circle" src="assets/img/testimonial/img2.jpg" alt="">
-                </div>
-                <div class="col-sm-9 animated delay-0-5 fadeInUp">
-                  <p>
-                    <i class="fa fa-quote-left fa-2x">
-                    </i>
-                    I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. 
-                  </p>
-                  <small>
-                    <span class="name">
-                      <i class="fa fa-user">
-                      </i>
-                      Robert L. Cathcart 
-                    </span>
-                    <span class="company">
-                      <i class="fa fa-building">
-                      </i>
-                      GrayGrids
-                    </span>
-                  </small>
-                </div>
-              </blockquote>
-            </div>
-            
-            <div class="item">
-              <blockquote>
-                <div class="col-sm-3 text-center animated zoomIn">
-                  <img class="img-circle" src="assets/img/testimonial/img3.jpg" alt="">
-                </div>
-                <div class="col-sm-9 animated delay-0-5 fadeInUp">
-                  <p>
-                    <i class="fa fa-quote-left fa-2x">
-                    </i>
-                    I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. 
-                  </p>
-                  <small>
-                    <span class="name">
-                      <i class="fa fa-user">
-                      </i>
-                      Robert L. Cathcart 
-                    </span>
-                    <span class="company">
-                      <i class="fa fa-building">
-                      </i>
-                      GrayGrids
-                    </span>
-                  </small>
-                </div>
-              </blockquote>
-            </div>
+                      {{ $tes->tes_div_p }}
+                    </p>
+                    <small>
+                      <span class="name">
+                        <i class="fa fa-user">
+                        </i>
+                        {{ $tes->tes_div_span_name }}
+                      </span>
+                      <span class="company">
+                        <i class="fa fa-building">
+                        </i>
+                        {{ $tes->tes_div_span_company }}
+                      </span>
+                    </small>
+                  </div>
+                </blockquote>
+              </div>
+            @endforeach
           </div>
           <!-- Carousel Buttons Next/Prev -->
           <a data-slide="prev" href="#testimonial-carousel" class="left carousel-control">
