@@ -10,6 +10,7 @@ use App\OtherService;
 use App\Progress;
 use App\Client;
 use App\Testimonial;
+use App\Team;
 
 use TCG\Voyager\Models\Post;
 
@@ -30,8 +31,9 @@ class HomeController extends Controller
         $progress = Progress::all(['prs_id', 'prs_div_class', 'prs_data_wow_delay', 'prs_i_class', 'prs_div_h3', 'prs_div_p']);
         $clients = Client::all(['cli_id', 'cli_div_img_src', 'cli_img_alt']);
         $testimonials = Testimonial::all(['tes_id', 'tes_div_class_active', 'tes_img_src', 'tes_div_p', 'tes_div_span_name', 'tes_div_span_company']);
+        $teams = Team::all(['tea_id', 'tea_data_wow_delay', 'tea_figure_img_src', 'tea_img_alt', 'tea_h2', 'tea_p', 'tea_a_href_facebook', 'tea_a_href_twitter', 'tea_a_href_linkedin', 'tea_a_href_google_plus']);
 
-        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials]);
+        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams]);
     }
 
     /**
