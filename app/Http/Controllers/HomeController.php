@@ -11,6 +11,7 @@ use App\Progress;
 use App\Client;
 use App\Testimonial;
 use App\Team;
+use App\Blog;
 
 use TCG\Voyager\Models\Post;
 
@@ -32,8 +33,9 @@ class HomeController extends Controller
         $clients = Client::all(['cli_id', 'cli_div_img_src', 'cli_img_alt']);
         $testimonials = Testimonial::all(['tes_id', 'tes_div_class_active', 'tes_img_src', 'tes_div_p', 'tes_div_span_name', 'tes_div_span_company']);
         $teams = Team::all(['tea_id', 'tea_data_wow_delay', 'tea_figure_img_src', 'tea_img_alt', 'tea_h2', 'tea_p', 'tea_a_href_facebook', 'tea_a_href_twitter', 'tea_a_href_linkedin', 'tea_a_href_google_plus']);
+        $blogs = Blog::all(['blo_id', 'blo_data_wow_delay', 'blo_div_a_href', 'blo_a_img_src', 'blo_a_img_alt', 'blo_a_href_category', 'blo_a_i_head', 'blo_a_href_item_text', 'blo_a_href_h3', 'blo_div_p', 'blo_a_href_clock', 'blo_a_clock_text', 'blo_a_href_comments', 'blo_a_comments_text', 'blo_a_href_user', 'blo_a_user_text']);
 
-        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams]);
+        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs]);
     }
 
     /**
