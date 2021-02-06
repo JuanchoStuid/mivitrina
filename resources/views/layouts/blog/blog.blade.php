@@ -1,138 +1,55 @@
 <!-- Container Starts -->
 <div class="container">
     <h1 class="section-title wow fadeInUpQuick">
-      From The Blog
+      Desde el Blog
     </h1>
     <!-- Row Starts -->
     <div class="row">
-      
+
+      @foreach ($blogs as $blog)
+      <!-- Blog Item Starts -->
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item">
-        <!-- Blog Item Starts -->
-        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="0.3s">
+        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="{{ $blog->blo_data_wow_delay }}">
           <div class="blog-item-img">
-            <a href="#">
-              <img src="assets/img/blog/home-items/img1.jpg" alt="">
+            <a href="{{ $blog->blo_div_a_href }}">
+              <img src="{{ $blog->blo_a_img_src }}" alt="{{ $blog->blo_a_img_alt }}">
             </a>                
-            <a href="#" class="blog-category">
+            <a href="{{ $blog->blo_a_href_category }}" class="blog-category">
               <i class="fa fa-folder-open-o"></i>
-              Business Plan
+              {{ $blog->blo_a_i_head }}
             </a>
           </div>
           <div class="blog-item-text">
-            <a href="#">
+            <a href="{{ $blog->blo_a_href_item_text }}">
               <h3>
-                Starting a Business Guide
+                {{ $blog->blo_a_href_h3 }}
               </h3>
             </a>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into...
+              {{ $blog->blo_div_p }}
             </p>
             <div class="blog-item-info">
-              <a href="#">
+              <a href="{{ $blog->blo_a_href_clock }}">
                 <i class="fa fa-clock-o">
                 </i>
-                Sept 13
+                {{ $blog->blo_a_clock_text }}
               </a>
-              <a href="#">
+              <a href="{{ $blog->blo_a_href_comments }}">
                 <i class="fa fa-comments">
                 </i>
-                9 Comments
+                {{ $blog->blo_a_comments_text }}
               </a>
-              <a href="#">
+              <a href="{{ $blog->blo_a_href_user }}">
                 <i class="fa fa-user">
                 </i>
-                Musharrof
+                {{ $blog->blo_a_user_text }}
               </a>
             </div>
           </div>
-        </div><!-- Blog Item Wrapper Ends-->
+        </div>
       </div>
+      <!-- Blog Item Wrapper Ends-->
+      @endforeach   
       
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item">
-        <!-- Blog Item Wrapper Start-->
-        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="0.6s">
-          <div class="blog-item-img">
-            <a href="#">
-              <img src="assets/img/blog/home-items/img2.jpg" alt="">
-            </a>
-            <a href="#" class="blog-category">
-              <i class="fa fa-folder-open-o"></i>
-              Daily Life
-            </a>
-          </div>
-          <div class="blog-item-text">
-            <a href="#">
-              <h3>
-                Plan for what is difficult
-              </h3>
-            </a>
-            <p>
-               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into...
-            </p>
-            
-            <div class="blog-item-info">
-              <a href="#">
-                <i class="fa fa-clock-o">
-                </i>
-                Sept 13
-              </a>
-              <a href="#">
-                <i class="fa fa-comments">
-                </i>
-                9 Comments
-              </a>
-              <a href="#">
-                <i class="fa fa-user">
-                </i>
-                Imran
-              </a>
-              
-            </div>
-          </div>
-        </div><!-- Blog Item Wrapper Ends-->
-      </div>          
-      
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item">
-        <!-- Blog Item Wrapper Starts-->
-        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="0.9s">
-          <div class="blog-item-img">
-            <a href="#">
-              <img src="assets/img/blog/home-items/img3.jpg" alt="">
-            </a>
-            <a href="#" class="blog-category">
-              <i class="fa fa-folder-open-o"></i>
-              Daily Life
-            </a>
-          </div>
-          <div class="blog-item-text">
-            <a href="#">
-              <h3>
-                 Colorful Easter Eggs
-              </h3>
-            </a>
-            <p>
-               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into...
-            </p>
-            <div class="blog-item-info">
-              <a href="#">
-                <i class="fa fa-clock-o">
-                </i>
-                Sept 13
-              </a>
-              <a href="#">
-                <i class="fa fa-comments">
-                </i>
-                9 Comments
-              </a>
-              <a href="#">
-                <i class="fa fa-user">
-                </i>
-                Arman
-              </a>
-              
-            </div>
-          </div>
-        </div><!-- Blog Item Wrapper Ends-->
-      </div>
     </div><!-- Row Ends -->
   </div><!-- Container Ends -->
