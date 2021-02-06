@@ -5,56 +5,27 @@
     </h1>
     <!-- Row Starts -->
     <div class="row">
+      
+      @foreach ($coolsfacts as $cool)
       <div class="col-md-4">
         <!-- Fact Block Starts -->
-        <div class="fact-block clearfix wow fadeInUp" data-wow-delay=".3s">
+        <div class="fact-block clearfix wow fadeInUp" data-wow-delay="{{ $cool->coo_data_wow_delay }}">
           <div class="fact-count text-center">
-            <i class="icon-Backward fa-5x">
+            <i class="{{ $cool->coo_i_class_icon }} fa-5x">
             </i>
             <h3>
               <span class="counter">
-                478
+                {{ $cool->coo_h3_span_numero }}
               </span>
             </h3>
             <h4>
-              Projects Done
+              {{ $cool->coo_h4_text }}
             </h4>
           </div>
-        </div><!-- Fact Block Ends -->
+        </div>
+        <!-- Fact Block Ends -->
       </div>
-      <div class="col-md-4">
-        <!-- Fact Block Starts -->
-        <div class="fact-block clearfix wow fadeInUp" data-wow-delay=".8s">
-          <div class="fact-count text-center">
-            <i class="icon-CodeSnippet fa-5x">
-            </i>
-            <h3>
-              <span class="counter">
-                78545
-              </span>
-            </h3>
-            <h4>
-              Lines Coded
-            </h4>
-          </div>
-        </div><!-- Fact Block Ends -->
-      </div>
-      <div class="col-md-4">
-        <!-- Fact Block Starts -->
-        <div class="fact-block clearfix wow fadeInUp" data-wow-delay="1.1s">
-          <div class="fact-count text-center">
-            <i class="icon-Photo fa-5x">
-            </i>
-            <h3>
-              <span class="counter">
-                398
-              </span>
-            </h3>
-            <h4>
-              Happy Clients
-            </h4>
-          </div>
-        </div><!-- Fact Block Ends -->
-      </div>
+      @endforeach
+      
     </div><!-- Row Ends -->
   </div><!-- Container Ends -->
