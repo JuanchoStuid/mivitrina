@@ -7,90 +7,43 @@
     <!-- Row Starts -->
     <div class="row">
 
-      <div class="col-sm-6 col-md-3">
+      @foreach ($teams as $team)
       <!-- Team Item Starts -->
-        <div class="team-item wow fadeInUpQuick" data-wow-delay="1s">
-          <figure>
-            <img src="assets/img/team/img1.jpg" alt="">
-            <div class="info">
-              <h2>
-                Musharrof Chy
-              </h2>
-              <p>
-                Jr. Frontend Developer
-              </p>
-            </div>
-            <figcaption>
-              <div class="social">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-facebook">
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-twitter">
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-linkedin">
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-google-plus">
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </figcaption>
-          </figure>
-        </div><!-- Team Item Ends -->
-      </div>
-
-
       <div class="col-sm-6 col-md-3">
-      <!-- Team Item Starts -->
-        <div class="team-item wow fadeInUpQuick" data-wow-delay="1.4s">
+        <div class="team-item wow fadeInUpQuick" data-wow-delay="{{ $team->tea_data_wow_delay }}">
           <figure>
-            <img src="assets/img/team/img2.jpg" alt="">
+            <img src="{{ $team->tea_figure_img_src }}" alt="{{ $team->tea_img_alt }}">
             <div class="info">
               <h2>
-                Justyna Michallek
+                {{ $team->tea_h2 }}
               </h2>
               <p>
-                Business Manager
+                {{ $team->tea_p }}
               </p>
             </div>
             <figcaption>
               <div class="social">
                 <ul>
                   <li>
-                    <a href="#">
+                    <a href="{{ $team->tea_a_href_facebook }}">
                       <i class="fa fa-facebook">
                       </i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="{{ $team->tea_a_href_twitter }}">
                       <i class="fa fa-twitter">
                       </i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="{{ $team->tea_a_href_linkedin }}">
                       <i class="fa fa-linkedin">
                       </i>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="{{ $team->tea_a_href_google_plus }}">
                       <i class="fa fa-google-plus">
                       </i>
                     </a>
@@ -99,102 +52,10 @@
               </div>
             </figcaption>
           </figure>
-        </div><!-- Team Item Starts -->
-      </div>
-
-      <div class="col-sm-6 col-md-3">
-        <!-- Team Item Starts -->
-        <div class="team-item wow fadeInUpQuick" data-wow-delay="1.8s">
-          <figure>
-            <img src="assets/img/team/img3.jpg" alt="">
-            <div class="info">
-              <h2>
-                Antonio U.
-              </h2>
-              <p>
-                Intern designer
-              </p>
-            </div>
-            <figcaption>
-              <div class="social">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-facebook">
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-twitter">
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-linkedin">
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-google-plus">
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </figcaption>
-          </figure>
-        </div><!-- Team Item Ends -->
-      </div>
-      
-      <div class="col-sm-6 col-md-3">
-        <!-- Team Item Starts -->
-        <div class="team-item wow fadeInUpQuick" data-wow-delay="2.2s">
-          <figure>
-            <img src="assets/img/team/img4.jpg" alt="">
-            <div class="info">
-              <h2>
-                Darrell S. Allen
-              </h2>
-              <p>
-                Chief Technical Officer
-              </p>
-            </div>
-            <figcaption>
-              <div class="social">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-facebook">
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-twitter">
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-linkedin">
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-google-plus">
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </figcaption>
-          </figure>
-        </div><!-- Team Item Ends -->
-      </div>
+        </div>
+        </div>
+      <!-- Team Item Ends -->
+      @endforeach
       
     </div><!-- Row Ends -->
   </div><!-- Container Ends -->
