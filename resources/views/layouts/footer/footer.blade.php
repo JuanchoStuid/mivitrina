@@ -106,11 +106,11 @@
       <div class="row">
         <div class="col-md-9 col-sm-6">
           <p class="copyright-text">
-            ©  2015 Plain. All right reserved. 
+            {{ $copiesrights->cop_copy_right_text }}
           </p>
         </div>
         <div class="col-md-3  col-sm-6">
-          <p class="copyright-text pull-right">A <a href="http://graygrids.com">GrayGrids</a> Production.</p>             
+          <p class="copyright-text pull-right">A <a href="http://graygrids.com"  target="_blank">{{ $copiesrights->cop_pull_right_text }}</a> Production.</p>             
         </div>
       </div>
     </div>
