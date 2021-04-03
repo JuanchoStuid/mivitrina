@@ -14,6 +14,7 @@ use App\Team;
 use App\Blog;
 use App\CopyRight;
 use App\CoolFact;
+use App\Filter;
 
 use TCG\Voyager\Models\Post;
 
@@ -38,8 +39,9 @@ class HomeController extends Controller
         $blogs = Blog::all(['blo_id', 'blo_data_wow_delay', 'blo_div_a_href', 'blo_a_img_src', 'blo_a_img_alt', 'blo_a_href_category', 'blo_a_i_head', 'blo_a_href_item_text', 'blo_a_href_h3', 'blo_div_p', 'blo_a_href_clock', 'blo_a_clock_text', 'blo_a_href_comments', 'blo_a_comments_text', 'blo_a_href_user', 'blo_a_user_text']);
         $copiesrights = CopyRight::find(1, ['cop_id', 'cop_copy_right_text', 'cop_pull_right_text']);
         $coolsfacts = CoolFact::all(['coo_id', 'coo_data_wow_delay', 'coo_i_class_icon', 'coo_h3_span_numero', 'coo_h4_text']);
+        $filters = Filter::all(['fil_id', 'fil_data_name', 'fil_data_filter']);
 
-        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts]);
+        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters]);
     }
 
     /**
