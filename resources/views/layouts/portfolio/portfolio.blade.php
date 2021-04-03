@@ -8,21 +8,11 @@
       
       <!-- Portfolio Controller/Buttons -->
       <div class="controls text-center">
-        <a class="filter btn btn-common" data-filter="all">
-          All 
-        </a>
-        <a class="filter btn btn-common" data-filter=".branding">
-          Branding 
-        </a>
-        <a class="filter btn btn-common" data-filter=".marketing">
-          Marketing
-        </a>
-        <a class="filter btn btn-common" data-filter=".planning">
-          Planning 
-        </a>
-        <a class="filter btn btn-common" data-filter=".research">
-          Research 
-        </a>
+        @foreach ($filters as $filt)
+          <a class="filter btn btn-common" data-filter="{{ $filt->fil_data_filter }}">
+            {{ $filt->fil_data_name }}
+          </a>
+        @endforeach
       </div>
       <!-- Portfolio Controller/Buttons Ends-->
 
