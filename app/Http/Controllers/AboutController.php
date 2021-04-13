@@ -17,6 +17,7 @@ use App\CoolFact;
 use App\Filter;
 use App\About;
 use App\Skill;
+use App\WhyChoose;
 
 use TCG\Voyager\Models\Post;
 
@@ -44,8 +45,9 @@ class AboutController extends Controller
         $filters = Filter::all(['fil_id', 'fil_data_name', 'fil_data_filter']);
         $abouts = About::find(1, ['abo_id', 'abo_h3_titulo_principal', 'abo_img_class', 'abo_img_src', 'abo_img_alt', 'abo_img_p', 'abo_h3_titulo_secundario']);
         $skills = Skill::all(['ski_id', 'ski_div_aria_valuenow', 'ski_div_aria_valuemin', 'ski_div_aria_valuemax', 'ski_div_style', 'ski_p', 'ski_span']);
+        $whys = WhyChoose::all(['why_id', 'why_data_wow_delay', 'why_i_class', 'why_h2', 'why_p']);
 
-        return view('about', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'abouts'=>$abouts, 'skills'=>$skills]);
+        return view('about', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'abouts'=>$abouts, 'skills'=>$skills, 'whys'=>$whys]);
     }
 
     /**
