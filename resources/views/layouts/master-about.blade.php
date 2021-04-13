@@ -70,80 +70,7 @@
         
     <!-- About us 1 Intro -->
     <section id="about-intro-block">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-6">
-            <div class="heading">
-              <h3 class="small-title">
-                The Company
-              </h3>
-            </div>
-            <div class="the-company wow fadeIn">
-              <p>
-                <img class="alignleft" src="assets/img/about/about3.png" alt="">
-                Lorem ipsum dolor sit amet, consectutur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nosturd exeritation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectutur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nosturd exeritation ullamco laboris nisi ut aliquip ex ea commodo consequat sed do eiusmod tempor incididunt ut. Lorem ipsum dolor sit amet, consectutur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nosturd exeritation ullamco laboris nisi.
-              </p>              
-            </div>
-          </div>          
-          <div class="col-sm-6 col-md-6 skill-wrapper wow fadeIn" data-wow-delay=".8s">
-            <div class="heading">
-              <h3 class="small-title">
-                Our skills
-              </h3>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%">
-                <p>
-                  Communication
-                </p>
-              </div>
-              <span class="percent">
-                86%
-              </span>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                <p>
-                  Planning
-                </p>
-              </div>
-              <span class="percent">
-                91%
-              </span>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                <p>
-                  Management
-                </p>
-              </div>
-              <span class="percent">
-                80%
-              </span>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                <p>
-                  Organization
-                </p>
-              </div>
-              <span class="percent">
-                70%
-              </span>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                <p>
-                  Leadership
-                </p>
-              </div>
-              <span class="percent">
-                90%
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+      @include('layouts.about.about-intro')
     </section>
     <!-- About Us-1 Intro Section End -->
       
@@ -251,81 +178,21 @@
         
     <!-- Testimonial Section -->
     <section id="testimonial">
-        @include('layouts.testimonial.testimonial1')
+        @include('layouts.testimonial.testimonial')
     </section>
     <!-- Testimonial Section End -->
         
     <!-- Team Section -->
     <section id="team">
-        @include('layouts.team.team1')
+        @include('layouts.team.team')
     </section>
     <!-- Team Section End -->
         
     <!-- Progress Section -->
     <section id="progress" style="width: 100%; height: 100%;" data-vide-bg="assets/video/progress-bg" data-vide-options="position: 0% 50%">
       <!-- Progress Inner Starts -->
-      <div class="progress-inner">
-        <!-- Container Starts -->
-        <div class="container">
-          <h1 class="section-title wow fadeInUpQuick">
-            Our Work Progress
-          </h1>
-          <!-- Row Starts -->
-          <div class="row">
-            <!-- Progress Items Starts -->
-            <div class="our-progress text-center">
-              <div class="col-md-3 progress-item wow bounceIn" data-wow-delay=".2s">
-                <div class="icon-effect">
-                  <i class="icon-Zoom">
-                  </i>
-                </div>
-                <h3>
-                  Research
-                </h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                </p>
-              </div>
-              <div class="col-md-3 progress-item progress-bottom wow bounceIn" data-wow-delay=".5s">
-                <div class="icon-effect">
-                  <i class="icon-Brush">
-                  </i>
-                </div>
-                <h3>
-                  Design
-                </h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                </p>
-              </div>
-              <div class="col-md-3 progress-item wow bounceIn" data-wow-delay=".8s">
-                <div class="icon-effect">
-                  <i class="icon-CodeSnippet">
-                  </i>
-                </div>
-                <h3>
-                  Code
-                </h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                </p>
-              </div>
-              <div class="col-md-3 progress-item progress-bottom wow bounceIn" data-wow-delay="1.3s">
-                <div class="icon-effect">
-                  <i class="icon-Backward">
-                  </i>
-                </div>
-                <h3>
-                  Launch
-                </h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                </p>
-              </div>
-            </div><!-- Progress Items Ends -->
-          </div><!-- Row Ends -->
-        </div><!-- Container Ends -->
-      </div><!-- Progress Inner Ends -->
+      @include('layouts.progress.progress')
+      <!-- Progress Inner Ends -->
     </section>
     <!-- Progress Section End -->  
         
