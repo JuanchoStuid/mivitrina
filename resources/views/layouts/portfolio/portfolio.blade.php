@@ -24,7 +24,7 @@
         @foreach ($portfolios as $por)
           <div class="mix {{ $por->por_div_class_mix }}">
             <figure class="effect-layla">
-              <img src="{{ $por->por_img_src }}">
+              <img src="{{ Voyager::image( $por->por_img_src ) }}">
               <figcaption>
                 <h3>
                   {{ $por->por_h3 }}
