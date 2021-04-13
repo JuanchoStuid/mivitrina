@@ -34,8 +34,9 @@ Route::get('master', function(){
   return view('layouts.master-primario');
 });
 
-Route::get('about', function(){
-  return view('layouts.master-about');
-});
+// Route::get('about', function(){
+//   return view('layouts.master-about');
+// });
 
 Route::get('welcome', 'HomeController@index')->name('home.index');
+Route::get('about', 'AboutController@index')->name('about.index');
