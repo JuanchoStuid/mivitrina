@@ -9,8 +9,9 @@
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
         </button>
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/img/logo.png" alt="PLAIN HTML5 Template">
+        <a class="navbar-brand" href="{{ route('home.index') }}">
+          {{-- <img src="assets/img/logo.png" alt="PLAIN HTML5 Template"> --}}
+          <img src="{{ Voyager::image( $logo->value ) }}" alt="Mi Vitrina HTML5 Template">
         </a>
       </div>
       <!-- Brand and toggle menu for mobile ends -->
