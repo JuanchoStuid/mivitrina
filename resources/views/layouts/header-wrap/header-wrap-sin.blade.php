@@ -6,6 +6,6 @@
 
 <!-- Header area starts -->
 <section id="header">
-    @include('layouts.header-wrap.header.header')
+    @include('layouts.header-wrap.header.header-sin')
 </section>
 <!-- Main Slider Section End-->      
