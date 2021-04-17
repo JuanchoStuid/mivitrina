@@ -15,6 +15,7 @@ use App\Blog;
 use App\CopyRight;
 use App\CoolFact;
 use App\Filter;
+use App\Setti;
 
 use TCG\Voyager\Models\Post;
 
@@ -28,6 +29,7 @@ class HomeController extends Controller
     public function index()
     {
         //
+        $logo = Setti::where('key', 'site.logo')->first();
         // $contact = Contact::find(1, ['id', 'con_icon', 'con_call', 'con_email']);
         $services = ServiceBlock::all(['ser_id', 'ser_data_wow_delay', 'ser_div_div_i_class', 'ser_h2', 'ser_p', 'ser_a_href_btn', 'ser_a_text_btn']);
         $portfolios = Portfolio::all(['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span']);
@@ -41,7 +43,7 @@ class HomeController extends Controller
         $coolsfacts = CoolFact::all(['coo_id', 'coo_data_wow_delay', 'coo_i_class_icon', 'coo_h3_span_numero', 'coo_h4_text']);
         $filters = Filter::all(['fil_id', 'fil_data_name', 'fil_data_filter']);
 
-        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters]);
+        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'logo'=>$logo]);
     }
 
     /**
