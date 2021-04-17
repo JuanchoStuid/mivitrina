@@ -18,6 +18,7 @@ use App\Filter;
 use App\About;
 use App\Skill;
 use App\WhyChoose;
+use App\Setti;
 
 use TCG\Voyager\Models\Post;
 
@@ -31,6 +32,7 @@ class AboutController extends Controller
     public function index()
     {
         //
+        $logo = Setti::where('key', 'site.logo')->first();
         // $contact = Contact::find(1, ['id', 'con_icon', 'con_call', 'con_email']);
         $services = ServiceBlock::all(['ser_id', 'ser_data_wow_delay', 'ser_div_div_i_class', 'ser_h2', 'ser_p', 'ser_a_href_btn', 'ser_a_text_btn']);
         $portfolios = Portfolio::all(['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span']);
@@ -48,7 +50,7 @@ class AboutController extends Controller
         $skills = Skill::all(['ski_id', 'ski_div_aria_valuenow', 'ski_div_aria_valuemin', 'ski_div_aria_valuemax', 'ski_div_style', 'ski_p', 'ski_span']);
         $whys = WhyChoose::all(['why_id', 'why_data_wow_delay', 'why_i_class', 'why_h2', 'why_p']);
 
-        return view('about', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'abouts'=>$abouts, 'abouts1'=>$abouts1, 'skills'=>$skills, 'whys'=>$whys]);
+        return view('about', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'abouts'=>$abouts, 'abouts1'=>$abouts1, 'skills'=>$skills, 'whys'=>$whys, 'logo'=>$logo]);
     }
 
     /**
