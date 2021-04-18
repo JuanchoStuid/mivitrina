@@ -76,7 +76,7 @@ class ProductController extends Controller
     public function show($id)
     {
         //
-        $producto = Portfolio::find($id, ['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span', 'por_precio', 'por_descripcion', 'por_descripcion_2', 'por_informacion', 'por_tags']);
+        $producto = Portfolio::find($id, ['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span', 'por_precio', 'por_descripcion', 'por_descripcion_2', 'por_informacion', 'por_tags', 'por_img_slider', 'por_img_thumbnail']);
         $logo = Setti::where('key', 'site.logo')->first();
         // $contact = Contact::find(1, ['id', 'con_icon', 'con_call', 'con_email']);
         $services = ServiceBlock::all(['ser_id', 'ser_data_wow_delay', 'ser_div_div_i_class', 'ser_h2', 'ser_p', 'ser_a_href_btn', 'ser_a_text_btn']);
