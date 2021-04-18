@@ -16,7 +16,7 @@ class Portfolio extends Model
 
     protected $primaryKey ='por_id';
 
-    protected $fillable = ['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span', 'por_precio', 'por_descripcion', 'por_descripcion_2', 'por_informacion', 'por_tags'];
+    protected $fillable = ['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span', 'por_precio', 'por_descripcion', 'por_descripcion_2', 'por_informacion', 'por_tags', 'por_img_slider', 'por_img_thumbnail'];
 
     // comentario
 
