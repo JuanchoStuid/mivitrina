@@ -23,12 +23,13 @@
         <!-- Portfolio Item Starts -->
         @foreach ($portfolios as $por)
           <div class="mix {{ $por->por_div_class_mix }}">
+            <a class="" href="{{ route("product.show",$por->por_id) }}">
+              <h4>{{ $por->por_h3 }}</h4>
+            </a>
             <figure class="effect-layla">
               <img src="{{ Voyager::image( $por->por_img_src ) }}">
               <figcaption>
-                <h3>
-                  {{ $por->por_h3 }}
-                </h3>
+                  <h3>{{ $por->por_h3 }}</h3>
                 <div class="portfolio-category">
                   <span>{{ $por->por_div_span }}</span>
                 </div>
