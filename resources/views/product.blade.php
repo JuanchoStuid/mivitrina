@@ -27,44 +27,26 @@
 {{-- División del content --}}
 @section('content-slider')
 <div class="slider-for slider">
-    <div>
-        <img src="assets/img/single-product/1.jpg">
-    </div>
-    <div>
-        <img src="assets/img/single-product/2.jpg">
-    </div>
-    <div>
-        <img src="assets/img/single-product/3.jpg">
-    </div>
-    <div>
-        <img src="assets/img/single-product/4.jpg">
-    </div>
-    <div>
-        <img src="assets/img/single-product/5.jpg">
-    </div>
-    <div>
-        <img src="assets/img/single-product/3.jpg">
-    </div>
+    @if ($producto->por_img_slider != null)
+        @foreach (json_decode($producto->por_img_slider, true) as $imag)
+            <div>
+                <img src="{{ Voyager::image( $imag ) }}">
+            </div>
+        @endforeach
+    @else
+        <p>No hay imagenes</p>
+    @endif
 </div>
 <ul id="productthumbnail" class="slider slider-nav">
-    <li>
-    <img src="assets/img/single-product/small/1.jpg">
-    </li>
-    <li>
-    <img src="assets/img/single-product/small/2.jpg">
-    </li>
-    <li>
-    <img src="assets/img/single-product/small/3.jpg">
-    </li>
-    <li>
-    <img src="assets/img/single-product/small/4.jpg">
-    </li>
-    <li>
-    <img src="assets/img/single-product/small/5.jpg">
-    </li>
-    <li>
-    <img src="assets/img/single-product/small/3.jpg">
-    </li>
+    @if ($producto->por_img_thumbnail != null)
+        @foreach (json_decode($producto->por_img_thumbnail, true) as $imag1)
+            <li>
+                <img src="{{ Voyager::image( $imag1 ) }}">
+            </li>
+        @endforeach
+    @else
+        <p>No hay imagenes</p>
+    @endif
 </ul>
 @endsection
 @section('content-info-panel')
