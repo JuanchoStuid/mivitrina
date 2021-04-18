@@ -34,9 +34,11 @@ Route::get('master', function(){
   return view('layouts.master-primario');
 });
 
-// Route::get('about', function(){
-//   return view('layouts.master-about');
+// Route::get('producto', function(){
+//   return view('layouts.master-product');
 // });
 
 Route::get('welcome', 'HomeController@index')->name('home.index');
 Route::get('about', 'AboutController@index')->name('about.index');
+Route::get('producto', 'ProductController@index')->name('product.index');
+Route::get('product{id}', 'ProductController@show')->name('product.show');
