@@ -80,7 +80,7 @@
     <!-- Pricing Table -->    
     <!-- Pricing Table Section -->
     <section id="pricing-block-x">
-        @include('layouts.pricing-block-x.pricing-block-x')
+        {{-- @include('layouts.pricing-block-x.pricing-block-x') --}}
     </section>
     <!-- Pricing Table  End -->    
     
