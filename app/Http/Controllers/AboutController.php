@@ -19,6 +19,7 @@ use App\About;
 use App\Skill;
 use App\WhyChoose;
 use App\Setti;
+use App\Slider;
 
 use TCG\Voyager\Models\Post;
 
@@ -49,8 +50,9 @@ class AboutController extends Controller
         $abouts1 = About::find(1, ['abo_id', 'abo_h3_titulo_principal', 'abo_img_class', 'abo_img_src', 'abo_img_alt', 'abo_img_p', 'abo_h3_titulo_secundario']);
         $skills = Skill::all(['ski_id', 'ski_div_aria_valuenow', 'ski_div_aria_valuemin', 'ski_div_aria_valuemax', 'ski_div_style', 'ski_p', 'ski_span']);
         $whys = WhyChoose::all(['why_id', 'why_data_wow_delay', 'why_i_class', 'why_h2', 'why_p']);
+        $sliders = Slider::all(['sli_id', 'sli_li_data_slide_to', 'sli_li_class', 'sli_div_class_item', 'sli_style_url_img', 'sli_h2', 'sli_h3', 'sli_i_class', 'sli_a_texto']);
 
-        return view('about', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'abouts'=>$abouts, 'abouts1'=>$abouts1, 'skills'=>$skills, 'whys'=>$whys, 'logo'=>$logo]);
+        return view('about', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'abouts'=>$abouts, 'abouts1'=>$abouts1, 'skills'=>$skills, 'whys'=>$whys, 'logo'=>$logo, 'sliders'=>$sliders]);
     }
 
     /**
