@@ -16,6 +16,7 @@ use App\CopyRight;
 use App\CoolFact;
 use App\Filter;
 use App\Setti;
+use App\Slider;
 
 use TCG\Voyager\Models\Post;
 
@@ -42,8 +43,9 @@ class HomeController extends Controller
         $copiesrights = CopyRight::find(1, ['cop_id', 'cop_copy_right_text', 'cop_pull_right_text']);
         $coolsfacts = CoolFact::all(['coo_id', 'coo_data_wow_delay', 'coo_i_class_icon', 'coo_h3_span_numero', 'coo_h4_text']);
         $filters = Filter::all(['fil_id', 'fil_data_name', 'fil_data_filter']);
+        $sliders = Slider::all(['sli_id', 'sli_li_data_slide_to', 'sli_li_class', 'sli_div_class_item', 'sli_style_url_img', 'sli_h2', 'sli_h3', 'sli_i_class', 'sli_a_texto']);
 
-        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'logo'=>$logo]);
+        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'logo'=>$logo, 'sliders'=>$sliders]);
     }
 
     /**
