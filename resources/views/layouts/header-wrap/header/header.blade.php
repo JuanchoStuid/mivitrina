@@ -321,66 +321,31 @@
   <div id="carousel-slider" class="carousel slide" data-interval="3000">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#carousel-slider" data-slide-to="0" class="active">
-      </li>
-      <li data-target="#carousel-slider" data-slide-to="1">
-      </li>
-      <li data-target="#carousel-slider" data-slide-to="2">
-      </li>
+      @foreach ($sliders as $slid)
+        <li data-target="#carousel-slider" data-slide-to="{{ $slid->sli_li_data_slide_to }}" class="{{ $slid->sli_li_class }}">
+        </li>
+      @endforeach
     </ol>
     <div class="carousel-inner">
       <!-- Carousel Items Strarts-->
-      <div class="item active" style="background-image: url(assets/img/slider/bg-1.jpg);">
-        <div class="carousel-caption">
-          <h2>
-            WE ARE WEB ARTISANS 
-          </h2>
-          <h3>
-            I should be incapable of drawing a single stroke at the present moment
-          </h3>
-          <a class="btn btn-lg btn-common" href="#">
-            <i class="fa fa-check">
-            </i>
-            Get Started
-          </a>
+      @foreach ($sliders as $slid)
+        <div class="item {{ $slid->sli_div_class_item }}" style="background-image: url({{ Voyager::image( $slid->sli_style_url_img ) }});">
+          <div class="carousel-caption">
+            <h2>
+              {{ $slid->sli_h2 }}
+            </h2>
+            <h3>
+              {{ $slid->sli_h3 }}
+            </h3>
+            <a class="btn btn-lg btn-common" href="#">
+              <i class="{{ $slid->sli_i_class }}">
+              </i>
+              {{ $slid->sli_a_texto }}
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="item" style="background-image: url(assets/img/slider/bg-2.jpg);">
-        <div class="carousel-caption">
-          <h2>
-            REFRESHING DESIGN
-          </h2>
-          <h3>
-            I should be incapable of drawing a single stroke at the present moment
-          </h3>
-          <a class="btn btn-common btn-lg " href="#">
-            <i class="fa fa-coffee">
-            </i>
-            Learn More
-          </a>
-        </div>
-      </div>
-      <div class="item" style="background-image: url(assets/img/slider/bg-3.jpg);">
-        <div class="carousel-caption">
-          <h2>
-            CRAFTED WITH LOVE
-          </h2>
-          <h3>
-            I should be incapable of drawing a single stroke at the present moment
-          </h3>
-          <a class="btn btn-lg btn-common" href="#">
-            <i class="fa fa-coffee">
-            </i>
-            Learn More
-          </a>
-          <a class="btn btn-common btn-lg" href="#">
-            <i class="fa fa-check">
-            </i>
-            Purchase Now
-          </a>
-        </div>
-      </div>
-    </div><!-- Carousel Item Ends -->
+      @endforeach
+    </div>
     <a class="left carousel-control" href="#carousel-slider" role="button" data-slide="prev">
       <i class="fa fa-chevron-left">
       </i>
