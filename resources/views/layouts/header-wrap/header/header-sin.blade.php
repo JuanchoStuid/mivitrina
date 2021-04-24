@@ -20,7 +20,6 @@
       <!-- Navbar Starts -->
       <div class="collapse navbar-collapse" id="navbar">
           {{ menu('mivitrina', 'layouts.menus.mivitrina') }}
-        </ul>
         
         <!-- Form for navbar search area -->
         <form class="full-search">
