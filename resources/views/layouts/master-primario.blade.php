@@ -33,7 +33,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/colors/orange.css" title="orange" media="screen" />
     <link rel="stylesheet" type="text/css" href="assets/css/colors/wisteria.css" title="wisteria" media="screen" />
     <link rel="stylesheet" type="text/css" href="assets/css/colors/mblue.css" title="mblue" media="screen" />
-    <link rel="stylesheet" type="text/css" href="assets/css/colors/greensea.css" title="greensea" media="screen" />      
+    <link rel="stylesheet" type="text/css" href="assets/css/colors/greensea.css" title="greensea" media="screen" />
+    <style>
+      #portfolio .portfolio-items img {
+      width: 100%;
+      object-fit: cover;
+      }
+    </style> 
     @yield('title1')
     @yield('style')
     
@@ -228,6 +234,11 @@
     </script>
     <!-- All JS plugin Triggers -->
     <script src="assets/js/main.js">
+    </script>
+    {{-- personalización --}}
+    <script>
+    var cw = $('#portfolio .portfolio-items img').width();
+    $('#portfolio .portfolio-items img').css({'height':cw+'px'});
     </script>
     
   </body>
