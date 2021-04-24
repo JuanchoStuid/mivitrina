@@ -12,6 +12,7 @@
         <a class="navbar-brand" href="{{ route('home.index') }}">
           {{-- <img src="assets/img/logo.png" alt="PLAIN HTML5 Template"> --}}
           <img src="{{ Voyager::image( $logo->value ) }}" alt="Mi Vitrina HTML5 Template">
+          {{-- <img src="{{ $logo->value ?? '' }}" alt="Mi Vitrina HTML5 Template"> --}}
         </a>
       </div>
       <!-- Brand and toggle menu for mobile ends -->
