@@ -26,7 +26,7 @@
               </h3>
             </a>
             <p>
-              {{ $blog->blo_div_p }}
+              {{ Str::limit($blog->blo_div_p, 92) }}
             </p>
             <div class="blog-item-info">
               <a href="{{ $blog->blo_a_href_clock }}">
