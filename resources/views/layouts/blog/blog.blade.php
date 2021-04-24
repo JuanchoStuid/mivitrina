@@ -28,6 +28,9 @@
             <p>
               {{ Str::limit($blog->blo_div_p, 92) }}
             </p>
+            <a class="" href="{{ route("blog.show",$blog->blo_id) }}" target="_blank">
+              <h4>Leer Más</h4>
+            </a>
             <div class="blog-item-info">
               <a href="{{ $blog->blo_a_href_clock }}">
                 <i class="fa fa-clock-o">
