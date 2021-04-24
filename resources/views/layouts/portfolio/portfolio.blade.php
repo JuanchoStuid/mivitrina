@@ -26,7 +26,7 @@
             <a class="" href="{{ route("product.show",$por->por_id) }}">
               {{-- <h4>{{ $por->por_h3 }}</h4> --}}
             <figure class="effect-layla">
-              <img src="{{ Voyager::image( $por->por_img_src ) }}" style="width: 100%;">
+              <img src="{{ Voyager::image( $por->por_img_src ) }}">
               <figcaption>
                   <h3>{{ $por->por_h3 }}</h3>
                 <div class="portfolio-category">
