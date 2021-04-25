@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-    <!--Fonts-->
+    <!-- Fonts -->
     <link rel="stylesheet" media="screen" href="assets/fonts/font-awesome/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/fonts/plain/plain-fonts.css">
     
