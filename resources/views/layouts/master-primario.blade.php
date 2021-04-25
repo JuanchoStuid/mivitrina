@@ -54,7 +54,7 @@
   </head>
   <body class="@yield('pageType')">
 
-  <!-- Header area wrapper starts -->
+  <!--   Header area wrapper starts -->
     <header id="header-wrap">
         @include('layouts.header-wrap.header-wrap')
     </header>
