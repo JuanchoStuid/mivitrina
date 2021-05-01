@@ -12,7 +12,12 @@
 @section('content-title')
     ¿Quiénes Sómos?
 @endsection
+
 @section('content-enlace')
+
+@endsection
+
+@section('style')
 
 @endsection
 @section('content-icon')
