@@ -107,7 +107,7 @@
     <!-- Progress Section End -->  
         
     <!-- Notice Section -->
-    <section id="notice">
+    {{-- <section id="notice">
     <!-- Container Starts -->
       <div class="container">
       <!-- Row Starts -->
@@ -130,10 +130,13 @@
                 Download Now 
               </a>
             </div>
-          </div><!-- Notice Container Ends -->
-        </div><!-- Row Starts -->
-      </div><!-- Container Ends -->
-    </section>
+          </div>
+          <!-- Notice Container Ends -->
+        </div>
+      <!-- Row Starts -->
+      </div>
+      <!-- Container Ends -->
+    </section> --}}
     <!-- Notice Section Ends -->  
         
     <!-- Footer Section -->
