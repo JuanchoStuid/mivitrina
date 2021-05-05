@@ -11,7 +11,7 @@
               <div class="item {{ $tes->tes_div_class_active }}">
                 <blockquote>
                   <div class="col-sm-3 text-center animated zoomIn">
-                    <img class="img-circle" src="{{ $tes->tes_img_src }}" alt="">
+                    <img class="img-circle" src="{{ Voyager::image( $tes->tes_img_src ) }}" alt="">
                   </div>
                   <div class="col-sm-9 animated delay-0-5 fadeInUp">
                     <p>
