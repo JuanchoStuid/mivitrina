@@ -2,7 +2,7 @@
 <div class="container">
 
     <h1 class="section-title wow fadeInDown" data-wow-delay=".5s">
-      Who We Are
+      {{ $section_who_we_are->sec_valor }}
     </h1>
     <!-- Row Starts -->
     <div class="row">
