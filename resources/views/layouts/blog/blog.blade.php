@@ -1,7 +1,7 @@
 <!-- Container Starts -->
 <div class="container">
     <h1 class="section-title wow fadeInUpQuick">
-      Desde el Blog
+      {{ $section_blog->sec_valor }}
     </h1>
     <!-- Row Starts -->
     <div class="row">
