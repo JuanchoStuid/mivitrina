@@ -12,9 +12,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -39,6 +39,7 @@ Route::get('master', function(){
 // });
 
 Route::get('welcome', 'HomeController@index')->name('home.index');
+Route::get('', 'HomeController@index')->name('home.index');
 Route::get('about', 'AboutController@index')->name('about.index');
 Route::get('producto', 'ProductController@index')->name('product.index');
 Route::get('product{id}', 'ProductController@show')->name('product.show');
