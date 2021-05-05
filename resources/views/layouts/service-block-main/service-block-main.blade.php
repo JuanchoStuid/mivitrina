@@ -2,7 +2,7 @@
 <div class="container">
 
     <h1 class="section-title wow fadeIn animated" data-wow-delay=".2s">
-      Que hacemos, hola jejeje
+      {{ $section_que_hacemos->sec_valor }}
     </h1>
     <div class="row">
       <!-- Service-Block-1 Item Starts -->
