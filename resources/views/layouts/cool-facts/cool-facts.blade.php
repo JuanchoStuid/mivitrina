@@ -1,7 +1,7 @@
 <!-- Container Starts -->
 <div class="container">
     <h1 class="section-title wow fadeInUpQuick">
-      Some Cool Facts
+      {{ $section_estadisticas->sec_valor }}
     </h1>
     <!-- Row Starts -->
     <div class="row">
