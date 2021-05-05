@@ -5,11 +5,10 @@
       <span>
         <i class="fa fa-map-marker">
         </i>
-        New South Wales, 
         @inject('Var', 'App\User')
           
         @php
-          $versiones = $Var::select('id', 'name')->orderBy('id', 'DESC')->first();
+          $versiones = $Var::select('id', 'name', 'email', 'telefono')->orderBy('id', 'DESC')->first();
         @endphp
         {{ $versiones->name }}
         {{-- <div class="t-changelog">{{$versiones->ver_numero ?? ''}} {{$versiones->ver_titulo ?? ''}}</div> --}}
@@ -18,12 +17,12 @@
       <span>
         <i class="fa fa-mobile-phone">
         </i>
-        01911787828
+        {{ $versiones->telefono }}
       </span>
       <span>
         <i class="fa fa-envelope">
         </i>
-        email@example.com
+        {{ $versiones->email }}
       </span>
     </div>
     <!-- Quick Contacts Ends -->
