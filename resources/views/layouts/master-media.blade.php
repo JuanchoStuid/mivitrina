@@ -25,8 +25,8 @@
     <link rel="stylesheet" type="text/css" href="assets/extras/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/extras/slicknav.css">
 
-      <!-- Color CSS Styles  -->  
-    <link rel="stylesheet" type="text/css" href="assets/css/colors/default.css" title="default" media="screen" />      
+    <!-- Color CSS Styles  -->  
+    @include('layouts.links.links')    
 
     @yield('title1')
     @yield('style')
