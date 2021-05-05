@@ -17,6 +17,7 @@ use App\CoolFact;
 use App\Filter;
 use App\Setti;
 use App\Slider;
+use App\Section;
 
 use TCG\Voyager\Models\Post;
 
@@ -31,6 +32,14 @@ class HomeController extends Controller
     {
         //
         $logo = Setti::where('key', 'site.logo')->first();
+        $section_que_hacemos = Section::where('sec_enlace', 'home')->where('sec_seccion', 'que_hacemos')->first();
+        $section_portfolio = Section::where('sec_enlace', 'home')->where('sec_seccion', 'portfolio')->first();
+        $section_other_services = Section::where('sec_enlace', 'home')->where('sec_seccion', 'other_services')->first();
+        $section_work_progress = Section::where('sec_enlace', 'home')->where('sec_seccion', 'work_progress')->first();
+        $section_estadisticas = Section::where('sec_enlace', 'home')->where('sec_seccion', 'estadisticas')->first();
+        $section_clients = Section::where('sec_enlace', 'home')->where('sec_seccion', 'clients')->first();
+        $section_who_we_are = Section::where('sec_enlace', 'home')->where('sec_seccion', 'who_we_are')->first();
+        $section_blog = Section::where('sec_enlace', 'home')->where('sec_seccion', 'blog')->first();
         // $contact = Contact::find(1, ['id', 'con_icon', 'con_call', 'con_email']);
         $services = ServiceBlock::all(['ser_id', 'ser_data_wow_delay', 'ser_div_div_i_class', 'ser_h2', 'ser_p', 'ser_a_href_btn', 'ser_a_text_btn']);
         $portfolios = Portfolio::all(['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span']);
@@ -45,7 +54,7 @@ class HomeController extends Controller
         $filters = Filter::all(['fil_id', 'fil_data_name', 'fil_data_filter']);
         $sliders = Slider::all(['sli_id', 'sli_li_data_slide_to', 'sli_li_class', 'sli_div_class_item', 'sli_style_url_img', 'sli_h2', 'sli_h3', 'sli_i_class', 'sli_a_texto']);
 
-        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'logo'=>$logo, 'sliders'=>$sliders]);
+        return view('home', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'logo'=>$logo, 'sliders'=>$sliders, 'section_que_hacemos'=>$section_que_hacemos, 'section_portfolio'=>$section_portfolio, 'section_other_services'=>$section_other_services, 'section_work_progress'=>$section_work_progress, 'section_estadisticas'=>$section_estadisticas, 'section_clients'=>$section_clients, 'section_who_we_are'=>$section_who_we_are, 'section_blog'=>$section_blog]);
     }
 
     /**
