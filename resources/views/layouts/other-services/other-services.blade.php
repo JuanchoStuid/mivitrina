@@ -1,7 +1,7 @@
 <div class="container">
     <!-- Container Starts -->
       <h1 class="section-title wow fadeInUp">
-        Other Services
+        {{ $section_other_services->sec_valor }}
       </h1>
       <div class="row">
 
