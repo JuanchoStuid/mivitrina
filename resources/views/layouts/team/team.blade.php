@@ -12,7 +12,7 @@
       <div class="col-sm-6 col-md-3">
         <div class="team-item wow fadeInUpQuick" data-wow-delay="{{ $team->tea_data_wow_delay }}">
           <figure>
-            <img src="{{ $team->tea_figure_img_src }}" alt="{{ $team->tea_img_alt }}">
+            <img src="{{ Voyager::image( $team->tea_figure_img_src ) }}" alt="{{ $team->tea_img_alt }}">
             <div class="info">
               <h2>
                 {{ $team->tea_h2 }}
