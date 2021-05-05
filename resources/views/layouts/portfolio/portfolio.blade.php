@@ -2,7 +2,7 @@
       <!-- Container Starts -->
       <div class="container">
         <h1 class="section-title wow fadeInUpQuick">
-          Portfolio 
+          {{ $section_portfolio->sec_valor }}
         </h1>
       </div><!-- Container Ends -->
       
