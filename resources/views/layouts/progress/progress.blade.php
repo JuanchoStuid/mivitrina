@@ -3,7 +3,7 @@
     <!-- Container Starts -->
     <div class="container">
       <h1 class="section-title wow fadeInUpQuick">
-        Our Work Progress
+        {{ $section_work_progress->sec_valor }}
       </h1>
       <!-- Row Starts -->
       <div class="row">
