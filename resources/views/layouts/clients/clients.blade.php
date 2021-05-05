@@ -1,7 +1,7 @@
 <!-- Container Ends -->
 <div class="container">
     <h1 class="section-title wow fadeInUpQuick" data-wow-delay=".5s">
-      Clients
+      {{ $section_clients->sec_valor }}
     </h1>
     <div class="wow fadeInUpQuick" data-wow-delay=".9s">
       <!-- Row and Scroller Wrapper Starts -->
