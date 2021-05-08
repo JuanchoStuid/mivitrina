@@ -7,7 +7,7 @@
     <div class="row">
       <!-- Service-Block-1 Item Starts -->
       @foreach ($services as $ser)
-        <div class="col-sm-6 col-md-3 text-center">
+        <div class="col-sm-12 col-md-6 col-lg-6 text-center">
           <div class="service-item wow fadeInUpQuick animated" data-wow-delay="{{ $ser->ser_data_wow_delay }}">
             <div class="icon-wrapper">
               <i class="{{ $ser->ser_div_div_i_class }}">
@@ -16,12 +16,12 @@
             <h2>
               {{ $ser->ser_h2 }}
             </h2>
-            <p>
+            <p style="font-size: 1.6rem">
               {{ $ser->ser_p }}
             </p>
-            <a href="{{ $ser->ser_a_href_btn }}" class="btn btn-common">
+            {{-- <a href="{{ $ser->ser_a_href_btn }}" class="btn btn-common">
               {{ $ser->ser_a_text_btn }}
-            </a>
+            </a> --}}
           </div>
         </div>
       @endforeach
