@@ -31,7 +31,7 @@
             <a class="" href="{{ route("blog.show",$blog->blo_id) }}" target="_blank">
               <h4>Leer Más</h4>
             </a>
-            <div class="blog-item-info">
+            <div class="blog-item-info" style="font-size: 1.6rem">
               <a href="{{ $blog->blo_a_href_clock }}">
                 <i class="fa fa-clock-o">
                 </i>
