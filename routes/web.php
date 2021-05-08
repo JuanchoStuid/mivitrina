@@ -34,8 +34,8 @@ Route::get('master', function(){
   return view('layouts.master-primario');
 });
 
-// Route::get('blog', function(){
-//   return view('layouts.master-blog');
+// Route::get('shop-category', function(){
+//   return view('layouts.master-shop');
 // });
 
 Route::get('welcome', 'HomeController@index')->name('home.index');
@@ -45,3 +45,4 @@ Route::get('producto', 'ProductController@index')->name('product.index');
 Route::get('product{id}', 'ProductController@show')->name('product.show');
 Route::get('media', 'MediaController@index')->name('media.index');
 Route::get('blog{id}', 'BlogController@show')->name('blog.show');
+Route::get('shop', 'ShopController@index')->name('shop.index');
