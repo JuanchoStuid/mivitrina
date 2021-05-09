@@ -43,7 +43,8 @@ class ShopController extends Controller
         $copiesrights = CopyRight::find(1, ['cop_id', 'cop_copy_right_text', 'cop_pull_right_text']);
         $coolsfacts = CoolFact::all(['coo_id', 'coo_data_wow_delay', 'coo_i_class_icon', 'coo_h3_span_numero', 'coo_h4_text']);
         $filters = Filter::all(['fil_id', 'fil_data_name', 'fil_data_filter']);
-        $productos = Producto::all(['pro_id', 'pro_div_class_mix', 'pro_precio', 'pro_img_slider', 'pro_img_src', 'pro_h3', 'pro_div_span', 'pro_descripcion', 'pro_descripcion_2', 'pro_informacion', 'pro_tags', 'pro_img_thumbnail', 'pro_presentacion']);
+        // $productos = Producto::all(['pro_id', 'pro_div_class_mix', 'pro_precio', 'pro_img_slider', 'pro_img_src', 'pro_h3', 'pro_div_span', 'pro_descripcion', 'pro_descripcion_2', 'pro_informacion', 'pro_tags', 'pro_img_thumbnail', 'pro_presentacion']);
+        $productos = Producto::paginate(9, ['pro_id', 'pro_div_class_mix', 'pro_precio', 'pro_img_slider', 'pro_img_src', 'pro_h3', 'pro_div_span', 'pro_descripcion', 'pro_descripcion_2', 'pro_informacion', 'pro_tags', 'pro_img_thumbnail', 'pro_presentacion']);
 
         return view('shop', ['services'=>$services, 'portfolios'=>$portfolios, 'otherservices'=>$otherservices, 'progress'=>$progress, 'clients'=>$clients, 'testimonials'=>$testimonials, 'teams'=>$teams, 'blogs'=>$blogs, 'copiesrights'=>$copiesrights, 'coolsfacts'=>$coolsfacts, 'filters'=>$filters, 'logo'=>$logo, 'productos'=>$productos]);
     }
