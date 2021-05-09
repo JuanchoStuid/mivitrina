@@ -27,8 +27,8 @@
 {{-- División del content --}}
 @section('content-slider')
 <div class="slider-for slider">
-    @if ($producto->por_img_slider != null)
-        @foreach (json_decode($producto->por_img_slider, true) as $imag)
+    @if ($producto->pro_img_slider != null)
+        @foreach (json_decode($producto->pro_img_slider, true) as $imag)
             <div>
                 <img src="{{ Voyager::image( $imag ) }}">
             </div>
@@ -38,8 +38,8 @@
     @endif
 </div>
 <ul id="productthumbnail" class="slider slider-nav">
-    @if ($producto->por_img_thumbnail != null)
-        @foreach (json_decode($producto->por_img_thumbnail, true) as $imag1)
+    @if ($producto->pro_img_thumbnail != null)
+        @foreach (json_decode($producto->pro_img_thumbnail, true) as $imag1)
             <li>
                 <img src="{{ Voyager::image( $imag1 ) }}">
             </li>
@@ -50,7 +50,7 @@
 </ul>
 @endsection
 @section('content-info-panel')
-    <h1 class="product-title">{{ $producto->por_h3 }}</h1>
+    <h1 class="product-title">{{ $producto->pro_h3 }}</h1>
     <div class="comments">
         <div class="product-star">
             <i class="fa fa-star"></i>
@@ -58,11 +58,11 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star-o"></i>
-            <span>{{ $producto->por_div_span }}</span>
+            <span>{{ $producto->pro_div_span }}</span>
         </div>                  
     </div>
     <div class="price">
-    $ {{ $producto->por_precio }}
+    $ {{ $producto->pro_precio }}
     </div>
     {{-- <div class="stock-list">
         <div class="product-details-sku">
@@ -76,7 +76,7 @@
         </div>
     </div> --}}
     <div class="description">
-        <p>{{ $producto->por_descripcion }}</p>
+        <p>{{ $producto->pro_descripcion }}</p>
     </div>
     {{-- <div class="size">
         <h4>Size Options</h4>
