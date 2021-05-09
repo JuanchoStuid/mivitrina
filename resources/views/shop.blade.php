@@ -162,7 +162,7 @@
                     <div class="col-md-12">
                         <div class="shop-product clearfix">
                         <div class="product-box">
-                            <a href="#"><img src="assets/img/products/img-01.jpg" alt=""></a>
+                            <a href="#"><img src="{{ Voyager::image( $prod->pro_img_src ) }}" alt=""></a>
                             <div class="cart-overlay"></div>
                             <span class="sticker sale"><strong>New</strong></span>
                             <button class="sticker wishlist"><i class="fa fa-heart-o"></i></button>
