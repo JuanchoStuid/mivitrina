@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <!-- Main Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <!--Fonts-->
