@@ -201,13 +201,14 @@
         <div class="shop-pagination  text-center">
           <div class="pagination">
             <ul>
-              <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
+              {{-- <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
               <li><a href="#">01</a></li>
               <li class="active"><a href="#">02</a></li>
               <li><a href="#">03</a></li>
               <li><a href="#">04</a></li>
               <li><a href="#">05</a></li>
-              <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
+              <li><a href="#"><i class="fa fa-arrow-right"></i></a></li> --}}
+              {{ $productos->links() }}
             </ul>
           </div>
         </div> 
