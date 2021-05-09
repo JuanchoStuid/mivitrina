@@ -16,6 +16,7 @@ use App\CopyRight;
 use App\CoolFact;
 use App\Filter;
 use App\Setti;
+use App\Producto;
 
 use TCG\Voyager\Models\Post;
 
@@ -76,7 +77,7 @@ class ProductController extends Controller
     public function show($id)
     {
         //
-        $producto = Portfolio::find($id, ['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span', 'por_precio', 'por_descripcion', 'por_descripcion_2', 'por_informacion', 'por_tags', 'por_img_slider', 'por_img_thumbnail']);
+        $producto = Producto::find($id, ['pro_id', 'pro_div_class_mix', 'pro_precio', 'pro_img_slider', 'pro_img_src', 'pro_h3', 'pro_div_span', 'pro_descripcion', 'pro_descripcion_2', 'pro_informacion', 'pro_tags', 'pro_img_thumbnail', 'pro_presentacion']);
         $logo = Setti::where('key', 'site.logo')->first();
         // $contact = Contact::find(1, ['id', 'con_icon', 'con_call', 'con_email']);
         $services = ServiceBlock::all(['ser_id', 'ser_data_wow_delay', 'ser_div_div_i_class', 'ser_h2', 'ser_p', 'ser_a_href_btn', 'ser_a_text_btn']);
