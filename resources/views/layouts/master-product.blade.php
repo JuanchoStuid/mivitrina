@@ -80,7 +80,7 @@
     </div>
     
     <!-- Style Switcher -->
-    <div class="switcher-box">      
+    {{-- <div class="switcher-box">      
       <h4>
         Color Style
       </h4>
@@ -126,7 +126,7 @@
       <a class="open-switcher show-switcher">
         <i class="fa fa-cog fa-spin"></i>
       </a>
-    </div>
+    </div> --}}
 
     
     <!-- JavaScript & jQuery Plugins -->
