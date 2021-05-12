@@ -42,7 +42,8 @@ class HomeController extends Controller
         $section_blog = Section::where('sec_enlace', 'home')->where('sec_seccion', 'blog')->first();
         // $contact = Contact::find(1, ['id', 'con_icon', 'con_call', 'con_email']);
         $services = ServiceBlock::all(['ser_id', 'ser_data_wow_delay', 'ser_div_div_i_class', 'ser_h2', 'ser_p', 'ser_a_href_btn', 'ser_a_text_btn']);
-        $portfolios = Portfolio::all(['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span']);
+        // $portfolios = Portfolio::all(['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span']);
+        $portfolios = Portfolio::take(12)->get(['por_id', 'por_div_class_mix', 'por_img_src', 'por_h3', 'por_div_span']);
         $otherservices = OtherService::all(['oth_id', 'oth_article_class', 'oth_data_wow_delay', 'oth_i_class', 'oth_div_h3', 'oth_div_p']);
         $progress = Progress::all(['prs_id', 'prs_div_class', 'prs_data_wow_delay', 'prs_i_class', 'prs_div_h3', 'prs_div_p']);
         $clients = Client::all(['cli_id', 'cli_div_img_src', 'cli_img_alt']);
