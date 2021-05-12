@@ -59,7 +59,7 @@
     <div class="carousel-inner">
       <!-- Carousel Items Strarts-->
       @foreach ($sliders as $slid)
-        <div class="item {{ $slid->sli_div_class_item }}" style="background-image: url({{ Voyager::image( $slid->sli_style_url_img ) }});">
+        <div class="item {{ $slid->sli_div_class_item }}" style="background-image: url({{ Voyager::image( $slid->sli_style_url_img ) }}); background-position:center;">
           <div class="carousel-caption">
             <h2>
               {{ $slid->sli_h2 }}
