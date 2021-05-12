@@ -17,7 +17,7 @@
           <div class="tab-pane active" id="description">
             <div class="pro-tab-info pro-description">
               <h3 class="small-title">Descripción</h3>
-              <p>{{ $producto->por_descripcion_2 }}</p>
+              <p>{{ $producto->pro_descripcion_2 }}</p>
             </div>
           </div>
           {{-- <div class="tab-pane" id="reviews">
@@ -125,13 +125,13 @@
           <div class="tab-pane" id="information">
             <div class="pro-tab-info pro-information">
               <h3 class="small-title">Información</h3>
-              <p>{{ $producto->por_informacion }}</p>
+              <p>{{ $producto->pro_informacion }}</p>
             </div>                      
           </div>
           <div class="tab-pane" id="tags">
             <div class="pro-tab-info pro-information">
               <h3 class="small-title">Tags</h3>
-              <p>{{ $producto->por_tags }}</p>
+              <p>{{ $producto->pro_tags }}</p>
             </div>                      
           </div>
         </div>                  
