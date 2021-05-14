@@ -34,9 +34,9 @@ Route::get('master', function(){
   return view('layouts.master-primario');
 });
 
-// Route::get('shop-category', function(){
-//   return view('layouts.master-shop');
-// });
+Route::get('master-producto', function(){
+  return view('layouts.master-product1');
+});
 
 Route::get('welcome', 'HomeController@index')->name('home.index');
 Route::get('', 'HomeController@index')->name('home.index');
