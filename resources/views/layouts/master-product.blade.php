@@ -6,7 +6,25 @@
     <title>
         Mi Vitrina @yield('titleMaestro')
     </title>
-    @include('layouts.links.links1')
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <!--Fonts-->
+    <link rel="stylesheet" media="screen" href="assets/fonts/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/plain/plain-fonts.css">
+    
+     
+    <link rel="stylesheet" type="text/css" href="assets/fonts/lovelo/lovelo.css">
+    <!-- Extras -->
+    <link rel="stylesheet" type="text/css" href="assets/extras/owl/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/extras/owl/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/extras/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/extras/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/extras/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/extras/slicknav.css">
 
     <!-- Color CSS Styles  -->  
     @include('layouts.links.links2')
