@@ -136,7 +136,7 @@
                         <div class="product-box">
                             <a href="#"><img src="{{ Voyager::image( $prod->pro_img_src ) }}" alt=""></a>
                             <div class="cart-overlay"></div>
-                            <span class="sticker sale"><strong>Sale</strong></span>
+                            {{-- <span class="sticker sale"><strong>Sale</strong></span> --}}
                             <button class="sticker wishlist"><i class="fa fa-heart-o"></i></button>
                             <button class="addtocart"><span>Adicionar al Carro</span><i class="fa fa-shopping-cart"></i></button>
                         </div>
@@ -164,7 +164,7 @@
                         <div class="product-box">
                             <a href="#"><img src="{{ Voyager::image( $prod->pro_img_src ) }}" alt=""></a>
                             <div class="cart-overlay"></div>
-                            <span class="sticker sale"><strong>New</strong></span>
+                            {{-- <span class="sticker sale"><strong>New</strong></span> --}}
                             <button class="sticker wishlist"><i class="fa fa-heart-o"></i></button>
                             <button class="addtocart"><span>Adicionar al Carro</span><i class="fa fa-shopping-cart"></i></button>
                         </div>
